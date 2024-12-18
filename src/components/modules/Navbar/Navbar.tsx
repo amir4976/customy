@@ -6,7 +6,7 @@ import { CiShoppingBasket } from "react-icons/ci";
 export default function Navbar() {
   return (
     <div  className='w-full h-[100px] flex items-center justify-between font-yBold gap-5' >
-      
+
           {/* logo */}
           <div className="logo w-52 max-xl:w-36 max-md:hidden">
             <Image src={"/assets/logo.png"} alt="logo" width={200} height={200} className='w-full h-full object-cover' />
@@ -31,9 +31,9 @@ export default function Navbar() {
             <button className="flex items-center gap-2 px-4 py-2 rounded-full text-gray-600">
             <CiShoppingBasket />
             <span>سبد خرید</span>
-            </button>
+            </button>   
 
-          </div>
+          </div> 
 
           {/* mobile logo */}
           <div className=" md:hidden">
