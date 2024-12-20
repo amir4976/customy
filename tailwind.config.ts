@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        btnBg:'var(--btns-color)'
       },
       fontFamily: {
         y: "var(--font-y)",
