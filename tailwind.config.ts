@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         btnBg:'var(--btns-color)'
+        ,PrimaryP:"var(--primary-pink)",
       },
       fontFamily: {
         y: "var(--font-y)",

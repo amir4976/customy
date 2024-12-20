@@ -8,6 +8,10 @@ import Category from "@/components/Templates/mainPage/Category/Category";
 import TopSalles from "@/components/Templates/mainPage/topSells/TopSalles";
 import SpecialSells from "@/components/Templates/mainPage/SpecialSells/SpecialSells";
 import MostPopular from "@/components/Templates/mainPage/MostPopular/MostPopular";
+import BestDesigners from "@/components/Templates/mainPage/BestDesigners/BestDesigners";
+import SpecialEcation from "@/components/Templates/mainPage/specialEcation/SpecialEcation";
+import LastestDesign from "@/components/Templates/mainPage/LastestDesigns/LastestDesign";
+import Favorites from "@/components/Templates/mainPage/Favorites/Favorites";
 export default function Home() {
   return (
     <>
@@ -38,15 +42,16 @@ export default function Home() {
 
       {/* best designers  */}
         <Title title={'برترین طراحان'} link={'/'} icon={<RiMedalFill />}/>
-
-
+        <BestDesigners/>
+        <SpecialEcation/>
 
         {/* newst designs of the week */}
-       <Title title={'جدیدترین طرح های هفته'} link={'/'} icon={<RiMedalFill />}/>
+       <Title title={'جدیدترین های هفته'} link={'/'} icon={<RiMedalFill />}/>
+      <LastestDesign/>
 
        {/* others like  */}
        <Title title={'دیگران می پسندند'} link={'/'} icon={<RiMedalFill />}/>
-
+        <Favorites/>
 
 
 
