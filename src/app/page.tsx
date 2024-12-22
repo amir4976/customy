@@ -30,7 +30,7 @@ const sections: Section[] = [
   { id: "special-education", title: null, component: <SpecialEcation /> },
   { id: "latest-designs", title: "جدیدترین های هفته", component: <LastestDesign /> },
   { id: "favorites", title: "دیگران می پسندند", component: <Favorites /> },
-];
+];   
 
 const Home: React.FC = () => {
   return (
