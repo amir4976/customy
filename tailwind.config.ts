@@ -13,6 +13,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         btnBg:'var(--btns-color)'
         ,PrimaryP:"var(--primary-pink)",
+        primRed:'var(--primary-red)',
       },
       fontFamily: {
         y: "var(--font-y)",

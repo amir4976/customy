@@ -6,7 +6,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --btns-color: #A72F3B;
+  --primary-red:#A72F3B;
   --primary-pink:#EDD5D8;
+  
 }
 
 @media (prefers-color-scheme: light) {

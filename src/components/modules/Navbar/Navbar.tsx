@@ -3,9 +3,16 @@ import Image from 'next/image'
 import { RiSearch2Line } from "react-icons/ri";
 import { FiLogIn } from "react-icons/fi";
 import { CiShoppingBasket } from "react-icons/ci";
+import { BiSolidHomeAlt2 } from 'react-icons/bi';
+import { FaPenToSquare } from 'react-icons/fa6';
+import { FaShoppingBasket, FaUser } from 'react-icons/fa';
+import { TiUser } from 'react-icons/ti';
 export default function Navbar() {
   return (
-    <div  className='w-full h-[100px] flex items-center justify-between font-yBold gap-5' >
+<>
+    <div className="w-full h-fit flex justify-center items-center">
+
+    <div  className='w-full max-w-7xl h-[100px] flex items-center justify-between font-yBold gap-5' >
 
           {/* logo */}
           <div className="logo w-52 max-xl:w-36 max-md:hidden">
@@ -40,5 +47,34 @@ export default function Navbar() {
             <Image src={'/assets/LOGO-Mobile.png'} alt='' className='' width={50} height={50}/>
           </div>
     </div>  
+    </div>
+
+
+      {/* mobile bottom navs */}
+
+      <div className="w-full fixed bottom-0 h-[80px] flex justify-evenly items-center  bg-primRed z-50 md:hidden text-white ">
+          <div className="flex flex-col items-center justify-center ">
+          <BiSolidHomeAlt2 />
+          <span>خانه</span>
+          </div>
+
+          <div className="flex flex-col items-center justify-center opacity-50">
+          <FaPenToSquare />
+          <span>طراحی سفارشی</span>
+          </div>
+
+          <div className="flex flex-col items-center justify-center opacity-50">
+          <FaShoppingBasket />
+          <span>سبد خرید</span>
+          </div>
+
+          <div className="flex flex-col items-center justify-center opacity-50">
+          <FaUser />
+          <span>پروفایل</span>
+          </div>
+      </div>
+
+
+</>
   )
 }
