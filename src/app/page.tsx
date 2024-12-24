@@ -50,7 +50,10 @@ const Home: React.FC = () => {
             {section.component}
           </section>
         ))}
+
       </main>
+      <Footer/>
+
     </>
   );
 };

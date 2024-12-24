@@ -6,7 +6,8 @@ import { CiShoppingBasket } from "react-icons/ci";
 import { BiSolidHomeAlt2 } from 'react-icons/bi';
 import { FaPenToSquare } from 'react-icons/fa6';
 import { FaShoppingBasket, FaUser } from 'react-icons/fa';
-import { TiUser } from 'react-icons/ti';
+import Link from 'next/link';
+
 export default function Navbar() {
   return (
 <>
@@ -31,10 +32,10 @@ export default function Navbar() {
 
           {/* btns */}
           <div className="btns flex items-center gap-2 max-md:hidden">
-            <button className="flex items-center gap-2 px-4 py-2 rounded-full text-gray-600">
+            <Link href={'/Login'} className="flex items-center gap-2 px-4 py-2 rounded-full text-gray-600">
             <FiLogIn />
-            <span>ورود | ثبت نام</span>
-            </button>
+            <span >ورود | ثبت نام</span>
+            </Link>
             <button className="flex items-center gap-2 px-4 py-2 rounded-full text-gray-600">
             <CiShoppingBasket />
             <span>سبد خرید</span>
