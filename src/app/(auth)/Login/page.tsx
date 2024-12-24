@@ -1,4 +1,5 @@
 "use client";
+import Modal from "@/components/modules/Login/Modal";
 import Navbar from "@/components/modules/Navbar/Navbar";
 import Image from "next/image";
 import React from "react";
@@ -19,6 +20,11 @@ function Page() {
   const [errorMessage, setErrorMessage] = React.useState<string>("");
   const [errorPassword, setErrorPassword] = React.useState<string>("");
 
+  // handle modal open and close
+  const [ isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
+  
+  
+  // handle form submission
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log("Form Submitted:", data);
   };
@@ -41,10 +47,11 @@ function Page() {
 
 
 
-  
+
 
   return (
     <>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Navbar />
       <div className="w-full mt-10 flex justify-center items-center">
         <div className="w-full max-w-7xl h-full flex justify-center items-center">
@@ -106,7 +113,7 @@ function Page() {
                 value="ورود"
                 className="w-full h-12 bg-primRed text-white rounded-lg cursor-pointer hover:bg-red-500 transition"
               />
-              <button className="w-full h-12 border border-gray-400 hover:border-primRed  rounded-lg cursor-pointer  transition">
+              <button onClick={()=>setIsModalOpen(!isModalOpen)}  type={"Button"}  className="w-full h-12 border border-gray-400 hover:border-primRed  rounded-lg cursor-pointer  transition">
                 ثبت نام در سایت
               </button>
             </form>
