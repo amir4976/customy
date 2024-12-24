@@ -113,7 +113,7 @@ function Page() {
                 value="ورود"
                 className="w-full h-12 bg-primRed text-white rounded-lg cursor-pointer hover:bg-red-500 transition"
               />
-              <button onClick={()=>setIsModalOpen(!isModalOpen)}  type={"Button"}  className="w-full h-12 border border-gray-400 hover:border-primRed  rounded-lg cursor-pointer  transition">
+              <button onClick={()=>setIsModalOpen(!isModalOpen)}  type={"button"}  className="w-full h-12 border border-gray-400 hover:border-primRed  rounded-lg cursor-pointer  transition">
                 ثبت نام در سایت
               </button>
             </form>
