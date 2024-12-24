@@ -12,6 +12,7 @@ import BestDesigners from "@/components/Templates/mainPage/BestDesigners/BestDes
 import SpecialEcation from "@/components/Templates/mainPage/specialEcation/SpecialEcation";
 import LastestDesign from "@/components/Templates/mainPage/LastestDesigns/LastestDesign";
 import Favorites from "@/components/Templates/mainPage/Favorites/Favorites";
+import Footer from "@/components/modules/Footer/Footer";
 
 // Define the type for each section
 interface Section {

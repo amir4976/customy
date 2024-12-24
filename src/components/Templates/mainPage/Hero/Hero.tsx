@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 
@@ -20,9 +21,9 @@ function Hero() {
               </span>
               شروع طراحی{" "}
             </button>
-            <button className="p-3 border-btnBg border rounded-xl w-full  hover:bg-btnBg hover:text-white transition-all">
+            <Link href={'/Products'} className="p-3 border-btnBg border rounded-xl w-full  hover:bg-btnBg hover:text-white transition-all flex justify-center items-center">
               دیدن محصولات
-            </button>
+            </Link>
           </div>
         </div>
         <div className="col-span-2 flex justify-center items-center mt-5 max-md:order-first">
