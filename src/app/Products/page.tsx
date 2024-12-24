@@ -9,6 +9,14 @@ import Pagination from "@/components/modules/pagination/Pagination";
 
 function page() {
   const data = Array.from({ length: 50 }, (_, index) => `Item ${index + 1}`);
+
+
+  // ^ todos ===
+
+  // ? 1 fix use client in this page problem with pagination
+  // ? 2 tack care of pagination styles 
+  // ? 3 pagination just use one column of grid you have to fix that bug and makeit like take column in atteributes
+  // * thats it fix it futur me tnx
   return (
     <>
       <Navbar />
