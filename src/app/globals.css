@@ -30,3 +30,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.Active {
+  @apply text-red-500;
+}

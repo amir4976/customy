@@ -20,7 +20,7 @@ function ProductsFilterMenu() {
     {name:'xl' , title:'ایکس لارج'}
   ]
   return (
-    <div className='w-full flex flex-col border p-3 rounded-xl  sticky top-10'>
+    <div className='w-full flex flex-col border p-3 rounded-xl  '>
             <div className=""> فیلتر ها </div>
             <SelectorFilter options={productTypes} title='طرح ها'/>
             <SelectorFilter options={productColor} title='رنگ ها'/>

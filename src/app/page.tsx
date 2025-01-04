@@ -43,7 +43,7 @@ const Home: React.FC = () => {
         <Hero />
 
         {/* Dynamic Sections */}
-        {sections.map((section) => (
+        {sections.map((section:Section) => (
           <section key={section.id} className="mt-8">
             {section.title && (
               <Title title={section.title} link="/" icon={<RiMedalFill />} />

@@ -4,42 +4,62 @@ import Navbar from "@/components/modules/Navbar/Navbar";
 import ProductsCard from "@/components/modules/products/ProductsCard";
 import Links from "@/components/Templates/mainPage/Links/Links";
 import ProductsFilterMenu from "@/components/Templates/ProductsPage/ProductsFilterMenu";
-import React from "react";
-import Pagination from "@/components/modules/pagination/Pagination";
+import React, { useState } from "react";
+// import Pagination from "@/components/modules/pagination/Pagination";
+import { Pagination } from "@nextui-org/pagination";
 
-function page() {
-  const data = Array.from({ length: 50 }, (_, index) => `Item ${index + 1}`);
+function Page() {
+  const data = Array.from({ length: 30}, (_, index) => `Item ${index + 1}`);
+  const itemsPerPage = 5;
+  const [currentPage ,setCurrentPage]= useState(1)
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const currentItems = data.slice(start, end);
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+
+
 
 
   // ^ todos ===
 
   // ? 1 fix use client in this page problem with pagination
-  // ? 2 tack care of pagination styles 
+  // ? 2 tack care of pagination styles
   // ? 3 pagination just use one column of grid you have to fix that bug and makeit like take column in atteributes
   // * thats it fix it futur me tnx
+
+
+  
   return (
     <>
       <Navbar />
       <div className="w-full flex justify-center items-center">
         <div className="w-full max-w-7xl">
           <Links />
-          <div className="w-full grid grid-cols-4  mt-10 ">
-            <div className="col-span-1  ">
+          <div className="w-full flex justify-between mt-10 ">
+            <div className="flex w-1/4  sticky top-10 h-fit">
               <ProductsFilterMenu />
             </div>
-            <Pagination data={data} itemsPerPage={6}>
-              {(currentData) => (
-                
-                  <div className="p-5 grid grid-cols-3   ">
-                    {currentData.map((index) => (
-                      <div className="col-span-1" key={index}>
-                        <ProductsCard />
-                      </div>
-                    ))}
-                  </div>
-               
-              )}
-            </Pagination>
+            <div className="flex-col flex">
+              <div className="p-5 grid grid-cols-3 flex-1  gap-5 ">
+
+                {
+                  currentItems.map((item) => (
+                    <div key={item}>
+                      <ProductsCard />
+                    </div>
+                  ))
+                }
+                <div className="col-span-1">
+                  <ProductsCard />
+                </div>
+
+              </div>
+              <div className="w-full flex justify-center items-center">
+
+              <Pagination initialPage={currentPage} total={totalPages} onChange={(val) => setCurrentPage(val)}  />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -48,4 +68,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
