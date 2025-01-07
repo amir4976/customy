@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
+
 const connectToDB = async ()=>{
     try {
-        if(mongoose.connections[0].readyState){
-            return false
-        }        
-
-    await mongoose.connect("mongodb://127.0.0.1:27017/Customy")
-    console.log('connected baby')
+        if(mongoose.connection.readyState === 0){
+            await mongoose.connect(process.env.MONGO_URI)
+            console.log('connected to db')
+        }
 
     } catch (error) {
         console.log('its not sorry',error)

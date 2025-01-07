@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Input, Select } from "@/components/modules/Input/Input";
+import { useRouter } from "next/router";
 
 // Define the type for form inputs
 type FormInputs = {
@@ -24,14 +25,20 @@ function UserSignForm({
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormInputs>();
+   } = useForm<FormInputs>();
 
+
+
+  
   // Handle form submission
   const onSubmit: SubmitHandler<FormInputs> = (data) => {
-    setUserData((prevData) => [...prevData, data]); // Update user data state
+      localStorage.setItem("userData", JSON.stringify(data));
+      console.log(data);
     Regester(); // Move to the next step
   };
 
+
+  
   return (
     <div className="w-full border rounded-xl p-3">
       <p className="text-2xl text-primRed">فرم ثبت اطلاعات</p>
