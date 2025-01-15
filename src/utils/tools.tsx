@@ -1,7 +1,5 @@
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-
-
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
  const generateToken = (payload: any): string => {
     console.log(payload)
@@ -28,4 +26,6 @@ const comparePassword = (password: string , hash: string): boolean => {
 };
 
 
-export { generateToken, verifyToken, hashPassword, comparePassword };
+
+export { generateToken, verifyToken, hashPassword, comparePassword};
+

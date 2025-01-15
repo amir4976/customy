@@ -21,12 +21,6 @@ function Page() {
 
 
 
-  // ^ todos ===
-
-  // ? 1 fix use client in this page problem with pagination
-  // ? 2 tack care of pagination styles
-  // ? 3 pagination just use one column of grid you have to fix that bug and makeit like take column in atteributes
-  // * thats it fix it futur me tnx
 
 
   
@@ -61,7 +55,7 @@ function Page() {
               </div>
             </div>
           </div>
-        </div>
+        </div>  
       </div>
       <Footer />
     </>

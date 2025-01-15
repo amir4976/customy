@@ -44,7 +44,7 @@ function Page() {
 
           <div className="flex h-full mt-20 items-center">
             {/* Form Section */}
-            <div className="form w-1/2">
+            <div className="form w-1/2 max-md:w-full">
               {currentPage === 1 ? (
                 <UserSignForm setUserData={setUserData} Regester={register} />
               ) : (
@@ -56,7 +56,7 @@ function Page() {
             </div>
 
             {/* Illustration Section */}
-            <div className="cover w-1/2 h-fit p-10">
+            <div className="cover w-1/2 h-fit p-10 max-md:hidden">
               <Image
                 src="/illustration/cover.png"
                 width={500}

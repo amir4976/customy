@@ -1,5 +1,6 @@
 import React from "react";
 
+
 interface props {
   Data: {
     icon: React.ReactNode;
@@ -7,7 +8,7 @@ interface props {
   }[];
   activePage: number;
 }
-function SignBradcramp({ Data, activePage }: props) {
+function Bradcramp({ Data, activePage }: props) {
     console.log(activePage)
   return (
     <div className="w-full flex  justify-center ">
@@ -36,4 +37,4 @@ function SignBradcramp({ Data, activePage }: props) {
   );
 }
 
-export default SignBradcramp;
+export default Bradcramp;
